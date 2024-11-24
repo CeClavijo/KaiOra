@@ -1,0 +1,7 @@
+{
+  "name": "KaiOra",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

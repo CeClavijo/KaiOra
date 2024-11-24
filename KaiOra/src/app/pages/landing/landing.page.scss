@@ -1,0 +1,31 @@
+.container {
+  margin-top: 35vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+}
+
+ion-title {
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+ion-text {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+ion-fab {
+  margin-top: 16px;
+}
+.appname{
+ color: #367e58;
+ font-size: 2.3rem;
+ margin-bottom: 20px;
+}
+ion-fab-button {
+  margin-top: 15px;
+  --ion-color-primary: #367e58;
+}

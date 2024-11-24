@@ -1,0 +1,105 @@
+.input {
+  font-size: 1rem;
+}
+
+ion-item {
+  color: black;
+  --background: #f1f1f1;
+  border-radius: 10px;
+  margin-bottom: 16px;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header {
+  margin-top: 100px;
+  margin-bottom: 80px;
+  text-align: center;
+}
+
+.header .subtitle {
+  color: grey;
+  font-size: 0.9rem;
+}
+
+.header title {
+  font-size: 2rem;
+}
+
+.signupLink {
+  display: flex;
+  margin: auto;
+  flex-direction: row;
+  align-content: center;
+  position: absolute;
+  justify-content: center;
+  left: 0;
+  bottom: 0;
+  width: 80%;
+  right: 0;
+}
+
+.signupLink p {
+  font-size: 0.9rem;
+}
+
+.signupLink a {
+  text-decoration: none;
+}
+
+.forgotpassword {
+  display: flex;
+  justify-content: center;
+}
+
+.forgotpassword a {
+  margin-top: 15px;
+  font-weight: 400;
+  font-size: 0.8rem;
+  text-decoration: none;
+}
+
+ion-icon {
+  color: #367e58;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.login-button {
+  --background: #367e58;
+  --background-activated: #2e6848;
+  --background-focused: #45a067;
+  --border-radius: 8px;
+  font-size: 1rem;
+  max-width: 400px;
+  width: 100%;
+}
+
+/* Ajustes responsivos para inputs y botón en pantallas más grandes */
+@media (min-width: 768px) {
+  ion-item {
+    max-width: 500px;
+  }
+
+  .button-container .login-button {
+    max-width: 500px;
+  }
+
+  .header {
+    margin-top: 120px;
+    margin-bottom: 100px;
+  }
+
+  .header .subtitle {
+    font-size: 1rem;
+  }
+
+  .signupLink {
+    width: 60%;
+  }
+}

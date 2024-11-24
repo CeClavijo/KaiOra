@@ -1,0 +1,36 @@
+<ion-content [fullscreen]="true">
+  <div class="header">
+    <ion-title class="title">Bienvenido a KaiOra</ion-title>
+    <p class="subtitle">Regístrate para tener tu cuenta</p>
+  </div>
+  <form [formGroup]="registerForm" (ngSubmit)="registerUser()">
+    <ion-item>
+      <ion-input placeholder="Nombre de Usuario" formControlName="username"></ion-input>
+      <ion-icon name="person-outline"></ion-icon>
+    </ion-item>
+    <ion-item>
+      <ion-input placeholder="Correo electrónico" formControlName="email"></ion-input>
+      <ion-icon name="mail-outline"></ion-icon>
+    </ion-item>
+    <ion-item>
+      <ion-input placeholder="Contraseña" type="password" formControlName="password"></ion-input>
+      <ion-icon name="lock-closed-outline"></ion-icon>
+    </ion-item>
+    <div class="button-container">
+      <ion-button class="login-button" type="submit">REGISTRARSE</ion-button>
+    </div>
+  <div class="signupLink">
+    <p>¿Ya tienes cuenta? <a [routerLink]="['/login']" style="color:#367e58">Ingresa aquí</a></p>
+  </div>
+
+</form>
+  <ion-toast
+    [isOpen]="toastConfig.isOpen"
+    [message]="toastConfig.message"
+    [color]="toastConfig.color"
+    duration="2000"
+    position="top"
+  ></ion-toast>
+
+</ion-content>
+
