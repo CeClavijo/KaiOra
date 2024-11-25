@@ -20,12 +20,12 @@ export class SignupPage {
     this.registerForm = this.fb.group({
       username: [
         '',
-        [Validators.required, Validators.pattern(/^[a-zA-Z0-9_-]{3,16}$/)],
+        [Validators.required, Validators.pattern(/^[a-zA-Z0-9_-]{3,16}$/)], // Validación segura para username
       ],
       email: ['', [Validators.required, Validators.email]],
       password: [
         '',
-        [Validators.required, Validators.minLength(6), Validators.pattern(/^[^\s]+$/)],
+        [Validators.required, Validators.minLength(6), Validators.pattern(/^[^\s]+$/)], // No espacios en blanco
       ],
     });
   }
@@ -74,7 +74,7 @@ export class SignupPage {
       } else if (error.code === 'auth/weak-password') {
         this.showToast('Tienes que ingresar una contraseña de mínimo 6 caracteres', 'danger');
       } else {
-        this.showToast(`Error al registrar usuario`, 'danger');
+        this.showToast(`Error al registrar usuario: ${error.message}`, 'danger');
       }
     }
   }
