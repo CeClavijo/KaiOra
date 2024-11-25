@@ -20,12 +20,12 @@ export class SignupPage {
     this.registerForm = this.fb.group({
       username: [
         '',
-        [Validators.required, Validators.pattern(/^[a-zA-Z0-9_-]{3,16}$/)], // Validación segura para username
+        [Validators.required, Validators.pattern(/^[a-zA-Z0-9_-]{3,16}$/)],
       ],
       email: ['', [Validators.required, Validators.email]],
       password: [
         '',
-        [Validators.required, Validators.minLength(6), Validators.pattern(/^[^\s]+$/)], // No espacios en blanco
+        [Validators.required, Validators.minLength(6), Validators.pattern(/^[^\s]+$/)],
       ],
     });
   }
@@ -62,7 +62,7 @@ export class SignupPage {
       const userId = userCredential.user?.uid;
 
       if (userId) {
-        await this.firestore.collection('users').doc(userId).set({ username, email });
+        await this.firestore.collection('users').doc(userId).set({username});
         this.showToast('Usuario registrado exitosamente', 'success');
         this.registerForm.reset();
       }

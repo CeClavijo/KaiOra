@@ -79,7 +79,9 @@ ion-icon {
   max-width: 400px;
   width: 100%;
 }
-
+ion-toast{
+  text-align: center;
+}
 /* Ajustes responsivos para inputs y botón en pantallas más grandes */
 @media (min-width: 768px) {
   ion-item {

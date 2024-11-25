@@ -3,25 +3,50 @@
     <ion-title class="title">Bienvenido a KaiOra</ion-title>
     <p class="subtitle">Ingresa a tu cuenta</p>
   </div>
-  <form>
+  <form (ngSubmit)="login()">
     <div class="ion-padding">
       <ion-item>
-        <ion-input placeholder="Correo electrónico" class="input"></ion-input>
+        <ion-input
+          placeholder="Correo electrónico"
+          class="input"
+          [(ngModel)]="email"
+          name="email"
+          type="email"
+        ></ion-input>
         <ion-icon name="mail-outline"></ion-icon>
       </ion-item>
       <ion-item>
-        <ion-input placeholder="contraseña" class="input"></ion-input>
+        <ion-input
+          placeholder="Contraseña"
+          class="input"
+          [(ngModel)]="password"
+          name="password"
+          type="password"
+        ></ion-input>
         <ion-icon name="lock-closed-outline"></ion-icon>
       </ion-item>
       <div class="button-container">
-        <ion-button expand="block" class="login-button">INGRESAR</ion-button>
+        <ion-button expand="block" class="login-button" type="submit">
+          INGRESAR
+        </ion-button>
       </div>
       <div class="forgotpassword">
         <a [routerLink]="['/resetpassword']" style="color:#367e58">¿Olvidaste tu contraseña?</a>
       </div>
       <div class="signupLink">
-        <p>¿No tienes cuenta? <a [routerLink]="['/signup']" style="color:#367e58">Registrate ahora</a></p>
+        <p>
+          ¿No tienes cuenta?
+          <a [routerLink]="['/signup']" style="color:#367e58">Registrate ahora</a>
+        </p>
       </div>
     </div>
   </form>
+
+  <ion-toast
+    [isOpen]="toastConfig.isOpen"
+    [message]="toastConfig.message"
+    [color]="toastConfig.color"
+    duration="2000"
+    position="top"
+  ></ion-toast>
 </ion-content>
